@@ -23,7 +23,7 @@ sudo apt-get install nginx
 - Controlling Nginx
 This will start Nginx
 ```bash
-sudo apt-get install nginx
+sudo systemctl start nginx
 ```
 
 To stop Nginx
