@@ -51,7 +51,7 @@ Then we need to reload the firewall rules.
 sudo ufw reload
 ```
 
--Make a Dummy Site
+- Make a Dummy Site
 serve files from a directory within my home directory. This directory will be called `www`.
 ```bash
 cd ~
