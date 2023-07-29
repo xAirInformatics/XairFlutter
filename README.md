@@ -21,6 +21,7 @@ samples, guidance on mobile development, and a full API reference.
 sudo apt-get install nginx
 ```
 - Controlling Nginx
+
 This will start Nginx
 ```bash
 sudo systemctl start nginx
@@ -61,6 +62,10 @@ In this new directory we will put all flutter project files.
 Then we need to change the www directory permissions. This will allow Nginx to access the files.
 ```bash
 chmod 0755  ~/www
+```
+- Nginx Configuration Directory
+```bash
+cd /etc/nginx
 ```
 - Nginx Configuration Directory
 ```bash
