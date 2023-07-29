@@ -81,11 +81,17 @@ server {
     index index.html; # point index file of the app
 }
 ```
-
-- Nginx Configuration Directory
+Create a symbolic link for the configuration files we want to enable with `Nginx`.
 ```bash
-cd /etc/nginx
+sudo ln -s flutter_app.conf /etc/nginx/conf.d/
 ```
+
+Then restart the Nginx server.
+```bash
+sudo systemctl restart nginx
+```
+
+last thing open browser and visit 127.0.0.1:82
 
 `Resource URL`:
 https://medium.com/@jasonrigden/how-to-host-a-static-website-with-nginx-8b2dd0c5b301
