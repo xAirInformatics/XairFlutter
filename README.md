@@ -63,7 +63,11 @@ Then we need to change the www directory permissions. This will allow Nginx to a
 chmod 0755 ~/www
 cd www/
 ```
-now create new directory with name `app` or any name in this new directory we will put all flutter project files.
+now create new directory with name `app` or any name in this new directory we will put all flutter project files in:
+```bash
+mkdir app
+```
+then create ngnix conf file for flutter app at www directory: 
 ```bash
 touch flutter_app.conf
 nano flutter_app.conf
@@ -71,11 +75,10 @@ nano flutter_app.conf
 add this lines to flutter_app.conf file:
 ```bash
 server {
-    listen 82;
+    listen 82; # 82 port to access app in browser
     listen [::]:82;
-    server_name zizo.com;
-    root /home/frappe/www/flutter_app;
-    index index.html;
+    root /home/frappe/www/app; # point the root folder that contian flutter app 
+    index index.html; # point index file of the app
 }
 ```
 
