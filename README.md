@@ -58,15 +58,27 @@ serve files from a directory within my home directory. This directory will be ca
 cd ~
 mkdir www
 ```
-In this new directory we will put all flutter project files.
 Then we need to change the www directory permissions. This will allow Nginx to access the files.
 ```bash
-chmod 0755  ~/www
+chmod 0755 ~/www
+cd www/
 ```
-- Nginx Configuration Directory
+now create new directory with name `app` or any name in this new directory we will put all flutter project files.
 ```bash
-cd /etc/nginx
+touch flutter_app.conf
+nano flutter_app.conf
 ```
+add this lines to flutter_app.conf file:
+```bash
+server {
+    listen 82;
+    listen [::]:82;
+    server_name zizo.com;
+    root /home/frappe/www/flutter_app;
+    index index.html;
+}
+```
+
 - Nginx Configuration Directory
 ```bash
 cd /etc/nginx
